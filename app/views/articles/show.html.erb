@@ -1,4 +1,6 @@
-<% if @article.user %>
+<h2 align="center" ><strong> Title: <%= @article.title %> </strong></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <% if @article.user %>
     <ul class="listing">
       <div class="row center">
         <div class="col-md-4 col-md-offset-4">
@@ -18,12 +20,8 @@
       </div>
     </ul>
   <% end %>
-
-<h2 align="center" > Title: <%= @article.title %> </h2>
-
-<div class="well col-xs-8 col-xs-offset-2">
-  <h4 class="center description"> <strong>Description</strong> </h4>
   <hr>
+  <h4 class="center description"> <strong>Description</strong> </h4>
   <%= simple_format(@article.description) %>
   <div class="article-actions">
     <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-xs btn-primary" %> 
